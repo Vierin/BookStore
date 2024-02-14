@@ -1,11 +1,28 @@
 .menu {
-    list-style: none;
-    display: flex;
-    gap: 10px;
+	list-style: none;
+	display: flex;
+	gap: 50px;
 
-    li {
-        display: flex;
-        align-items: center;
-        gap: 5px;
-    }
+	li {
+		a {
+			font-size: 14px;
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			background: var(--color-primary);
+			padding: 8px 24px;
+			border-radius: 35px;
+			transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+
+			&:hover {
+				background-color: var(--color-beige);
+				color: var(--color-bg);
+			}
+		}
+
+		svg {
+			width: 22px;
+			height: auto;
+		}
+	}
 }

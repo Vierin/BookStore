@@ -1,12 +1,15 @@
 import  { FC } from 'react'
-import Header from '../../components/scaffold/header/Header'
-import Hero from '../../components/modules/hero/Hero'
+import Hero from '../../modules/hero/Hero'
+import Layout from '../../components/layout/Layout'
+import Slider from '../../modules/slider/Slider'
 
 const Home:FC = () => {
   return (
     <>
-        <Header/>
-        <Hero/>
+        <Layout>
+            <Hero/>
+            <Slider/>
+        </Layout>
     </>
   )
 }

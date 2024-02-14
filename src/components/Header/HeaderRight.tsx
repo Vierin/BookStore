@@ -2,13 +2,18 @@ import { FC } from 'react'
 import { ImIcon } from '../scaffold/ImIcons'
 
 import styles from './Header.module.scss'
+import {rightMenu} from '../menu/menu.data'
 
 const HeaderRight:FC = () => {
   return (
     <ul className={styles.header__list}>
-        <li><a><ImIcon name="ImBookmark"/></a></li>
-        <li><a><ImIcon name="ImCart" /></a></li>
-        <li><a><ImIcon name="ImUser"/></a></li>
+        {rightMenu.items.map((item, index) => (
+            <li key={index}>
+                <a href={item.link}>
+                    <ImIcon name={item.icon} />
+                </a>
+            </li>
+        ))}
     </ul>
   )
 }
